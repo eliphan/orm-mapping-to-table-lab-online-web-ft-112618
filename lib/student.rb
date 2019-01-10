@@ -30,7 +30,7 @@ attr_reader :id
       INSERT INTO students (name,grade)
       VALUE (?,?)
     SQL 
-  DB[:conn]execute(sql,self.name,self.grade)
+   DB[:conn].execute(sql,self.name,self.grade)
   end
   
 end
